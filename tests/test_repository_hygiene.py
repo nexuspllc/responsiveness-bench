@@ -58,7 +58,6 @@ def test_repository_contains_no_process_or_promotion_layer() -> None:
 
     forbidden_phrases = (
         "substack",
-        "chatgpt",
         "human-ai collaboration",
         "ai-assisted",
         "publication draft",
@@ -74,6 +73,14 @@ def test_repository_contains_no_process_or_promotion_layer() -> None:
             continue
         lowered = path.read_text(encoding="utf-8").lower()
         assert not any(phrase in lowered for phrase in forbidden_phrases), path
+        if "chatgpt" in lowered:
+            # Run provenance must identify the measured model surface.
+            relative_parts = path.relative_to(ROOT).parts
+            assert (
+                len(relative_parts) == 3
+                and relative_parts[0] == "results"
+                and relative_parts[2] == "README.md"
+            ), path
 
 @pytest.mark.parametrize(
     "relative_path",
