@@ -2,6 +2,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
+import pytest
+
 ROOT = Path(__file__).parents[1]
 
 
@@ -72,3 +74,55 @@ def test_repository_contains_no_process_or_promotion_layer() -> None:
             continue
         lowered = path.read_text(encoding="utf-8").lower()
         assert not any(phrase in lowered for phrase in forbidden_phrases), path
+
+@pytest.mark.parametrize(
+    "relative_path",
+    ["results/run-a/README.md", "results/run-b/README.md"],
+)
+def test_result_provenance_can_name_the_model_surface(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, relative_path: str
+) -> None:
+    path = tmp_path / relative_path
+    path.parent.mkdir(parents=True)
+    path.write_text("Surface: ChatGPT. Model: example.\n", encoding="utf-8")
+    monkeypatch.setattr(__name__ + ".ROOT", tmp_path)
+
+    test_repository_contains_no_process_or_promotion_layer()
+
+
+@pytest.mark.parametrize(
+    "relative_path",
+    [
+        "README.md",
+        "docs/method-note.md",
+        "results/README.md",
+        "results/run-a/notes.md",
+        "results/run-a/nested/README.md",
+    ],
+)
+def test_model_surface_exception_is_confined_to_run_readmes(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, relative_path: str
+) -> None:
+    path = tmp_path / relative_path
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("Surface: ChatGPT.\n", encoding="utf-8")
+    monkeypatch.setattr(__name__ + ".ROOT", tmp_path)
+
+    with pytest.raises(AssertionError):
+        test_repository_contains_no_process_or_promotion_layer()
+
+
+@pytest.mark.parametrize(
+    "phrase",
+    ["substack", "human-ai collaboration", "ai-assisted", "publication draft"],
+)
+def test_result_provenance_keeps_other_hygiene_restrictions(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, phrase: str
+) -> None:
+    path = tmp_path / "results" / "run-a" / "README.md"
+    path.parent.mkdir(parents=True)
+    path.write_text(phrase + "\n", encoding="utf-8")
+    monkeypatch.setattr(__name__ + ".ROOT", tmp_path)
+
+    with pytest.raises(AssertionError):
+        test_repository_contains_no_process_or_promotion_layer()
