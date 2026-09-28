@@ -1,0 +1,58 @@
+{
+ "audit": {
+  "case_count": 33,
+  "manifest": {
+   "dataset_hash": "a213052ab9d23ad8ea64fc164deb6ecea5281f56167217d508ce0644b800becf",
+   "model_id": "constant-policy-audit",
+   "prompt_arm": "typed_input",
+   "prompt_hash": "8b767dfa9af028713c5c8f8c40be3a18c32f4ee49bb80da03d44bae72c420619",
+   "protocol_hash": "5146efd8d699116eb4bca0b8b81cb96d6bf2c8f4aa4933b07c23cef318867ef1"
+  },
+  "max_accuracy": 0.6363636363636364,
+  "passed": true,
+  "scores": [
+   {
+    "accuracy": 0.6363636363636364,
+    "correct": 21,
+    "policy": "always_request_evidence",
+    "total": 33
+   },
+   {
+    "accuracy": 0.5454545454545454,
+    "correct": 18,
+    "policy": "always_deny_first_layer",
+    "total": 33
+   },
+   {
+    "accuracy": 0.5454545454545454,
+    "correct": 18,
+    "policy": "always_fully_responsive",
+    "total": 33
+   }
+  ],
+  "threshold": 0.75
+ },
+ "bench_commit": "6935f53cc3e6f2a950f0f612884f241cfe4b1240",
+ "generation_wall_s": 2414.193,
+ "llama_cpp_version": "0.3.35",
+ "model_id": "Mistral-7B-Instruct-v0.3 Q4_K_M (bartowski GGUF re-quant) sha256:1270d22c0fbb3d09",
+ "model_key": "mistral_7b",
+ "provision": {
+  "model_name": "Mistral-7B-Instruct-v0.3 Q4_K_M (bartowski GGUF re-quant)",
+  "model_path": "/home/steph/.cache/organism-local/models/mistral_7b--Mistral-7B-Instruct-v0.3-Q4_K_M.gguf",
+  "pin": {
+   "at": "2026-09-28T13:34:09Z",
+   "bytes": 4372812000,
+   "pinned_at_fetch": 1,
+   "sha256": "1270d22c0fbb3d092fb725d4d96c457b7b687a5f5a715abe1e818da303e562b6"
+  },
+  "python": "/home/steph/.cache/organism-local/venv-cpu/bin/python",
+  "setup_s": 4.357
+ },
+ "validate": {
+  "case_count": 33,
+  "family_count": 11,
+  "issues": [],
+  "valid": true
+ }
+}

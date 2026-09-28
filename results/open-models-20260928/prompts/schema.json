@@ -1,0 +1,126 @@
+{
+  "$id": "https://example.invalid/responsiveness-bench/inference-output-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "case_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "claim_layers": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "backed": {
+            "type": "boolean"
+          },
+          "kind": {
+            "enum": [
+              "assertion",
+              "causal",
+              "conditional",
+              "normative",
+              "comparative"
+            ]
+          },
+          "layer_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "layer_kind": {
+            "enum": [
+              "explicit",
+              "implicated"
+            ]
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "text": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "layer_id",
+          "text",
+          "kind",
+          "layer_kind",
+          "required",
+          "backed"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "response_moves": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "act": {
+            "enum": [
+              "admit",
+              "deny",
+              "qualify",
+              "request_evidence",
+              "counterassert",
+              "deflect",
+              "ignore"
+            ]
+          },
+          "move_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "relation": {
+            "enum": [
+              "same",
+              "contradicts",
+              "entails",
+              "narrows_within_scope",
+              "scope_mismatch",
+              "irrelevant",
+              "unknown"
+            ]
+          },
+          "target_layer_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "text": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "move_id",
+          "text",
+          "act",
+          "target_layer_id",
+          "relation"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "stated_verdict": {
+      "enum": [
+        "fully_responsive",
+        "partially_responsive",
+        "nonresponsive",
+        "invalid"
+      ]
+    }
+  },
+  "required": [
+    "case_id",
+    "claim_layers",
+    "response_moves",
+    "stated_verdict"
+  ],
+  "title": "Responsiveness Bench inference output",
+  "type": "object"
+}

@@ -1,0 +1,58 @@
+{
+ "audit": {
+  "case_count": 33,
+  "manifest": {
+   "dataset_hash": "a213052ab9d23ad8ea64fc164deb6ecea5281f56167217d508ce0644b800becf",
+   "model_id": "constant-policy-audit",
+   "prompt_arm": "typed_input",
+   "prompt_hash": "8b767dfa9af028713c5c8f8c40be3a18c32f4ee49bb80da03d44bae72c420619",
+   "protocol_hash": "5146efd8d699116eb4bca0b8b81cb96d6bf2c8f4aa4933b07c23cef318867ef1"
+  },
+  "max_accuracy": 0.6363636363636364,
+  "passed": true,
+  "scores": [
+   {
+    "accuracy": 0.6363636363636364,
+    "correct": 21,
+    "policy": "always_request_evidence",
+    "total": 33
+   },
+   {
+    "accuracy": 0.5454545454545454,
+    "correct": 18,
+    "policy": "always_deny_first_layer",
+    "total": 33
+   },
+   {
+    "accuracy": 0.5454545454545454,
+    "correct": 18,
+    "policy": "always_fully_responsive",
+    "total": 33
+   }
+  ],
+  "threshold": 0.75
+ },
+ "bench_commit": "6935f53cc3e6f2a950f0f612884f241cfe4b1240",
+ "generation_wall_s": 2103.013,
+ "llama_cpp_version": "0.3.35",
+ "model_id": "Qwen2.5-7B-Instruct Q4_K_M (bartowski GGUF re-quant) sha256:65b8fcd92af6b4fe",
+ "model_key": "qwen2_5_7b",
+ "provision": {
+  "model_name": "Qwen2.5-7B-Instruct Q4_K_M (bartowski GGUF re-quant)",
+  "model_path": "/home/steph/.cache/organism-local/models/qwen2_5_7b--Qwen2.5-7B-Instruct-Q4_K_M.gguf",
+  "pin": {
+   "at": "2026-09-28T13:43:20Z",
+   "bytes": 4683074240,
+   "pinned_at_fetch": 1,
+   "sha256": "65b8fcd92af6b4fefa935c625d1ac27ea29dcb6ee14589c55a8f115ceaaa1423"
+  },
+  "python": "/home/steph/.cache/organism-local/venv-cpu/bin/python",
+  "setup_s": 131.448
+ },
+ "validate": {
+  "case_count": 33,
+  "family_count": 11,
+  "issues": [],
+  "valid": true
+ }
+}
