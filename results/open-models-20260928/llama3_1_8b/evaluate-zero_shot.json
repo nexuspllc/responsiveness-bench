@@ -1,0 +1,295 @@
+{
+  "case_count": 33,
+  "cases": [
+    {
+      "case_id": "backed-challenge-left",
+      "gold_verdict": "nonresponsive",
+      "inferred_verdict": "nonresponsive",
+      "layer_f1": 0.0,
+      "move_f1": 1.0,
+      "self_consistent": false,
+      "stated_verdict": "fully_responsive",
+      "structure_exact": false
+    },
+    {
+      "case_id": "backed-challenge-right",
+      "gold_verdict": "nonresponsive",
+      "inferred_verdict": "fully_responsive",
+      "layer_f1": 0.0,
+      "move_f1": 1.0,
+      "self_consistent": true,
+      "stated_verdict": "fully_responsive",
+      "structure_exact": false
+    },
+    {
+      "case_id": "backed-challenge-neutral",
+      "gold_verdict": "nonresponsive",
+      "inferred_verdict": "nonresponsive",
+      "layer_f1": 0.0,
+      "move_f1": 1.0,
+      "self_consistent": false,
+      "stated_verdict": "fully_responsive",
+      "structure_exact": false
+    },
+    {
+      "case_id": "bilayer-partial-left",
+      "gold_verdict": "partially_responsive",
+      "inferred_verdict": "fully_responsive",
+      "layer_f1": 0.0,
+      "move_f1": 1.0,
+      "self_consistent": true,
+      "stated_verdict": "fully_responsive",
+      "structure_exact": false
+    },
+    {
+      "case_id": "channel-content-right",
+      "gold_verdict": "nonresponsive",
+      "inferred_verdict": "nonresponsive",
+      "layer_f1": 1.0,
+      "move_f1": 0.0,
+      "self_consistent": true,
+      "stated_verdict": "nonresponsive",
+      "structure_exact": false
+    },
+    {
+      "case_id": "channel-content-neutral",
+      "gold_verdict": "nonresponsive",
+      "inferred_verdict": "nonresponsive",
+      "layer_f1": 0.0,
+      "move_f1": 0.0,
+      "self_consistent": true,
+      "stated_verdict": "nonresponsive",
+      "structure_exact": false
+    },
+    {
+      "case_id": "direct-denial-right",
+      "gold_verdict": "fully_responsive",
+      "inferred_verdict": "fully_responsive",
+      "layer_f1": 1.0,
+      "move_f1": 1.0,
+      "self_consistent": true,
+      "stated_verdict": "fully_responsive",
+      "structure_exact": true
+    },
+    {
+      "case_id": "direct-denial-neutral",
+      "gold_verdict": "fully_responsive",
+      "inferred_verdict": "fully_responsive",
+      "layer_f1": 1.0,
+      "move_f1": 1.0,
+      "self_consistent": true,
+      "stated_verdict": "fully_responsive",
+      "structure_exact": true
+    },
+    {
+      "case_id": "entailment-counterassertion-left",
+      "gold_verdict": "fully_responsive",
+      "inferred_verdict": "fully_responsive",
+      "layer_f1": 1.0,
+      "move_f1": 1.0,
+      "self_consistent": true,
+      "stated_verdict": "fully_responsive",
+      "structure_exact": true
+    },
+    {
+      "case_id": "entailment-counterassertion-right",
+      "gold_verdict": "fully_responsive",
+      "inferred_verdict": "fully_responsive",
+      "layer_f1": 1.0,
+      "move_f1": 1.0,
+      "self_consistent": true,
+      "stated_verdict": "fully_responsive",
+      "structure_exact": true
+    },
+    {
+      "case_id": "entailment-counterassertion-neutral",
+      "gold_verdict": "fully_responsive",
+      "inferred_verdict": "fully_responsive",
+      "layer_f1": 1.0,
+      "move_f1": 1.0,
+      "self_consistent": true,
+      "stated_verdict": "fully_responsive",
+      "structure_exact": true
+    },
+    {
+      "case_id": "evidence-request-left",
+      "gold_verdict": "fully_responsive",
+      "inferred_verdict": "fully_responsive",
+      "layer_f1": 0.0,
+      "move_f1": 1.0,
+      "self_consistent": true,
+      "stated_verdict": "fully_responsive",
+      "structure_exact": false
+    },
+    {
+      "case_id": "evidence-request-right",
+      "gold_verdict": "fully_responsive",
+      "inferred_verdict": "fully_responsive",
+      "layer_f1": 0.0,
+      "move_f1": 1.0,
+      "self_consistent": true,
+      "stated_verdict": "fully_responsive",
+      "structure_exact": false
+    },
+    {
+      "case_id": "evidence-request-neutral",
+      "gold_verdict": "fully_responsive",
+      "inferred_verdict": "fully_responsive",
+      "layer_f1": 0.0,
+      "move_f1": 1.0,
+      "self_consistent": true,
+      "stated_verdict": "fully_responsive",
+      "structure_exact": false
+    },
+    {
+      "case_id": "irrelevant-counterassert-left",
+      "gold_verdict": "nonresponsive",
+      "inferred_verdict": "nonresponsive",
+      "layer_f1": 1.0,
+      "move_f1": 0.0,
+      "self_consistent": true,
+      "stated_verdict": "nonresponsive",
+      "structure_exact": false
+    },
+    {
+      "case_id": "irrelevant-counterassert-right",
+      "gold_verdict": "nonresponsive",
+      "inferred_verdict": "nonresponsive",
+      "layer_f1": 1.0,
+      "move_f1": 1.0,
+      "self_consistent": true,
+      "stated_verdict": "nonresponsive",
+      "structure_exact": true
+    },
+    {
+      "case_id": "irrelevant-counterassert-neutral",
+      "gold_verdict": "nonresponsive",
+      "inferred_verdict": "nonresponsive",
+      "layer_f1": 1.0,
+      "move_f1": 0.0,
+      "self_consistent": true,
+      "stated_verdict": "nonresponsive",
+      "structure_exact": false
+    },
+    {
+      "case_id": "matched-scope-qualification-left",
+      "gold_verdict": "fully_responsive",
+      "inferred_verdict": "fully_responsive",
+      "layer_f1": 1.0,
+      "move_f1": 1.0,
+      "self_consistent": true,
+      "stated_verdict": "fully_responsive",
+      "structure_exact": true
+    },
+    {
+      "case_id": "matched-scope-qualification-right",
+      "gold_verdict": "fully_responsive",
+      "inferred_verdict": "fully_responsive",
+      "layer_f1": 1.0,
+      "move_f1": 1.0,
+      "self_consistent": true,
+      "stated_verdict": "fully_responsive",
+      "structure_exact": true
+    },
+    {
+      "case_id": "matched-scope-qualification-neutral",
+      "gold_verdict": "fully_responsive",
+      "inferred_verdict": "fully_responsive",
+      "layer_f1": 1.0,
+      "move_f1": 1.0,
+      "self_consistent": true,
+      "stated_verdict": "fully_responsive",
+      "structure_exact": true
+    },
+    {
+      "case_id": "posture-occurrence-left",
+      "gold_verdict": "nonresponsive",
+      "inferred_verdict": "fully_responsive",
+      "layer_f1": 0.0,
+      "move_f1": 0.0,
+      "self_consistent": true,
+      "stated_verdict": "fully_responsive",
+      "structure_exact": false
+    },
+    {
+      "case_id": "posture-occurrence-right",
+      "gold_verdict": "nonresponsive",
+      "inferred_verdict": "fully_responsive",
+      "layer_f1": 0.0,
+      "move_f1": 0.0,
+      "self_consistent": true,
+      "stated_verdict": "fully_responsive",
+      "structure_exact": false
+    },
+    {
+      "case_id": "posture-occurrence-neutral",
+      "gold_verdict": "nonresponsive",
+      "inferred_verdict": "fully_responsive",
+      "layer_f1": 1.0,
+      "move_f1": 0.0,
+      "self_consistent": true,
+      "stated_verdict": "fully_responsive",
+      "structure_exact": false
+    },
+    {
+      "case_id": "qualified-admission-left",
+      "gold_verdict": "fully_responsive",
+      "inferred_verdict": "fully_responsive",
+      "layer_f1": 1.0,
+      "move_f1": 1.0,
+      "self_consistent": true,
+      "stated_verdict": "fully_responsive",
+      "structure_exact": true
+    },
+    {
+      "case_id": "qualified-admission-right",
+      "gold_verdict": "fully_responsive",
+      "inferred_verdict": "fully_responsive",
+      "layer_f1": 1.0,
+      "move_f1": 1.0,
+      "self_consistent": true,
+      "stated_verdict": "fully_responsive",
+      "structure_exact": true
+    },
+    {
+      "case_id": "qualified-admission-neutral",
+      "gold_verdict": "fully_responsive",
+      "inferred_verdict": "fully_responsive",
+      "layer_f1": 1.0,
+      "move_f1": 1.0,
+      "self_consistent": true,
+      "stated_verdict": "fully_responsive",
+      "structure_exact": true
+    }
+  ],
+  "content_effect": 0.12418300653594772,
+  "directional_asymmetry": -0.058823529411764705,
+  "directional_p_value": 1.0,
+  "directional_positive_side": "right",
+  "extra_case_ids": [],
+  "layer_f1": 0.6153846153846154,
+  "manifest": {
+    "dataset_hash": "a213052ab9d23ad8ea64fc164deb6ecea5281f56167217d508ce0644b800becf",
+    "model_id": "Llama-3.1-8B-Instruct Q4_K_M (bartowski GGUF re-quant) sha256:7b064f5842bf9532",
+    "prompt_arm": "zero_shot",
+    "prompt_hash": "945ab5441ad55e758ebc8080546e634350f068e3cb6b1296d6ee667d2b7812d4",
+    "protocol_hash": "5146efd8d699116eb4bca0b8b81cb96d6bf2c8f4aa4933b07c23cef318867ef1"
+  },
+  "missing_case_ids": [
+    "bilayer-full-left",
+    "bilayer-full-neutral",
+    "bilayer-full-right",
+    "bilayer-partial-neutral",
+    "bilayer-partial-right",
+    "channel-content-left",
+    "direct-denial-left"
+  ],
+  "move_f1": 0.7307692307692307,
+  "prediction_count": 26,
+  "scored_count": 26,
+  "self_consistency_rate": 0.9230769230769231,
+  "structure_exact_match": 0.46153846153846156,
+  "structure_flip_rate": 0.5714285714285714,
+  "verdict_accuracy": 0.8076923076923077,
+  "verdict_flip_rate": 0.14285714285714285
+}
